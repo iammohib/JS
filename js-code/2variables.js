@@ -16,6 +16,9 @@ const:-local scope
       can not make variable without assigning value
 */
 
+
+
+
 //variable var:-
 var studentName;    //can make variable without assigning value
 var studentName = "naman";  //can redeclare
@@ -27,6 +30,11 @@ studentName = `mohib`;  //can re-assign
   console.log(studentName);
 }
 console.log(studentName);
+
+
+
+
+
 
 //variable let:-
 let studentName2; //make variable without assigning value
@@ -41,6 +49,10 @@ studentName2 = `joker`; //can re-assign
 console.log(studentName2);
 
 
+
+
+
+
 //variable const:-
 // const studentName2; //ERROR---can not make variable without assigning value
 const studentName3 = `naman`; 
@@ -53,6 +65,10 @@ const studentName3 = `naman`;
   console.log(studentName3);
 }
 console.log(studentName3);
+
+
+
+
 
 
 //Manupulating DOM - Adding Variables Characterstics Chart
