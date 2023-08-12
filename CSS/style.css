@@ -1,7 +1,29 @@
-#code-box{
-    color: white;
-    border-radius: 15px;
-    background-color: rgb(3, 3, 36);
-    width: 75%;
-    overflow: scroll;
+body {
+  background-color: rgb(44, 44, 44);
 }
+#heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  color: rgb(251, 201, 27);
+  flex-wrap: wrap;
+}
+#box {
+    width: 80vw;
+    background-color: rgb(6, 6, 42);
+    align-items: center;
+    color: white;
+    margin: auto;
+  }
+  #title_bar {
+    display: flex;
+    background-color: rgb(37, 37, 37);
+  }
+  #title {
+    flex: 1 1 auto;
+    padding: 10px 15px;
+  }
+  #copy {
+    padding: 10px 15px;
+  }

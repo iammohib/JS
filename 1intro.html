@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to JavaScript</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    <h1>Introduction to JavaScript</h1>
-    <h3>Source Code:</h3>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">Introduction to JavaScript</h1>
 
-    <xmp id="code-box">
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+
+      <xmp id="code-box"
+>
         //----------Printing basic code in the console----//
         console.log(`Hello World`);
         
@@ -45,10 +53,17 @@
         4. PascalCase
         */
         
-    </xmp>
-
+    </xmp
+      >
+    </div>
 
     <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
     <script src="./JS/1intro.js"></script>
-</body>
+  </body>
 </html>
