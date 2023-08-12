@@ -1,0 +1,7 @@
+#code-box{
+    color: white;
+    border-radius: 15px;
+    background-color: rgb(3, 3, 36);
+    width: 75%;
+    overflow: scroll;
+}
