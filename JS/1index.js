@@ -19,8 +19,8 @@ console.table({
 
 console.group(`Student Details`);
 console.log(`mohib`);
-console.log(`21`)
-console.groupEnd('Student Details')
+console.log(`21`);
+console.groupEnd("Student Details");
 
 console.timeEnd(`Time Taken`);
 
