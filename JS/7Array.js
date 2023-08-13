@@ -22,7 +22,7 @@ console.log(x, typeof x); //mohib string
 x = arr.indexOf(`mohib`);
 console.log(x); //9
 
-//------------sort()-------------
+//------------Alphabetic sort()-------------
 //It make changes in the actual array
 let arr2 = [5, 9, 2, 11];
 x = arr2.sort();
@@ -74,6 +74,7 @@ x = arr.splice(1, 0, `mohib`, `brinjal`);
 console.log(x, arr); //[] [ 'apple', 'mohib', 'brinjal', 'grapes' ]
 
 //slice(fromIndex, tillIndex)
+//it create a new array
 console.log("slice", arr.slice(1)); //slice [ 'mohib', 'brinjal', 'grapes' ]
 console.log("slice", arr.slice(1, 3)); //slice [ 'mohib', 'brinjal' ]
 
@@ -98,6 +99,7 @@ console.log(x, typeof x); //1,true,7,4,2,[object Object] string
 
 //Numeric Sort
 arr = [23, 43, 12];
+//Compare function:- returned (negative, zero, positive)
 sortedNum = function name(a, b) {
   return a - b;
 };
@@ -129,3 +131,8 @@ const fruits = [
 console.log(fruits.join(`,`));
 console.log(fruits.toString());
 console.log(fruits.join(">"));
+
+//Converting String to Array
+str = "mohibuddin";
+arr = Array.from(str);
+console.log(arr);
