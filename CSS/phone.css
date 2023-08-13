@@ -1,0 +1,26 @@
+@media only screen and (max-width: 500px) {
+  body {
+    margin: 0;
+  }
+  #heading {
+    font-size: 28px;
+    text-align: center;
+  }
+  #flex-container {
+    margin: 10px auto;
+    width: 90vw;
+    font-size: 20px;
+  }
+  #box {
+    width: 90vw;
+  }
+  #code-box {
+    font-size: 16px;
+  }
+  #content {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 500px) {
+  /* code if in future */
+}
