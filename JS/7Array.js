@@ -1,6 +1,24 @@
 /*
 Array in Javascript
 arr.length
+arr[number]
+arr.indexOf(element)
+arr.lastIndexOf(element)
+arr.sort()
+arr.reverse()
+arr.concat(arr2)
+arr[2] = `mohib`
+st.push("mohib")
+st.pop()
+st.shift()
+st.unshift(`mohib`)
+splice(start: number, deleteCount?: number)
+slice(fromIndex, tillIndex)
+arr instanceof Array;
+delete arr[0];
+arr.join(`,`);
+arr.toString()
+Array.from(str)
 */
 
 let x;
