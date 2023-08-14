@@ -23,3 +23,15 @@ const stDetails = {
   },
 };
 stDetails.func();
+
+//lexical this
+let obj={
+  greeting:'good day',
+  names:['aman','mohib','anoop','prince'],
+  greet(){
+      this.names.forEach(element => {
+          console.log(this.greeting+' mr. '+element)
+      });
+  }
+};
+obj.greet()
