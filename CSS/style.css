@@ -10,34 +10,41 @@ body {
   flex-wrap: wrap;
 }
 #box {
-    width: 80vw;
-    background-color: rgb(6, 6, 42);
-    align-items: center;
-    color: white;
-    margin: auto;
-    overflow: scroll;
-  }
-  #title_bar {
-    display: flex;
-    background-color: rgb(10, 10, 10);
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
-  #title {
-    flex: 1 1 auto;
-    padding: 10px 15px;
-  }
-  #copy {
-    padding: 10px 15px;
-  }
-  #code-box{
-    font-size: 16px;
-  }
-  #content{
-    color: white;
-    display: block;
-    border: 2px solid white;
-    width: 30vw;
-    margin: auto;
-  }
+  width: 80vw;
+  background-color: rgb(6, 6, 42);
+  align-items: center;
+  color: white;
+  margin: auto;
+  overflow: scroll;
+}
+#title_bar {
+  display: flex;
+  background-color: rgb(10, 10, 10);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#title {
+  flex: 1 1 auto;
+  padding: 10px 15px;
+}
+#copy {
+  padding: 10px 15px;
+}
+#code-box {
+  font-size: 16px;
+}
+#content {
+  color: white;
+  display: block;
+  border: 2px solid white;
+  width: 30vw;
+  margin: auto;
+}
+
+#dom {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
