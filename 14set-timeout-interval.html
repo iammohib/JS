@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout and setInterval in JS</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">setTimeout and setInterval in JS</h1>
+    <div id="dom">
+      <h3 id="watch"></h3>
+      <button onclick="clearFunc()">Stop Watch</button>
+    </div>
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box">
+        /*
+        setTimeout
+        clearTimeout
+        setTimeout(function, <delay>, arg1, arg2)
+        setInterval
+        */
+        
+        console.log(`hello world`);
+        
+        //-------setTimeout---------
+        a = setTimeout(() => {
+          console.log(`hello mohib`);
+        }, 2000);
+        // clearTimeout(a);
+        //-------clearTimeout---------
+        b = confirm("clear timeout");
+        if (b) {
+          clearTimeout(a);
+          console.log(`timeout cleared`);
+          console.log(`bye mohib`);
+        }
+        
+        // //--------setTimeout(f,delay,a1,a2)------
+        const power = (x, y) => {
+          console.log(x * y);
+          return x * x;
+        };
+        
+        x = setTimeout(power, 1000, 5, 25);
+        y = setInterval(power, 2000, 5, 25);
+        clearTimeout(y);
+        
+        //--------setInterval------------
+        displayTime = () => {
+          time = new Date();
+          // console.log(time);
+        
+          document.getElementById("watch").innerHTML = time;
+          //second method
+          // watch.innerHTML=new Date();
+        };
+        z = setInterval(displayTime, 1000);
+        function clearFunc() {
+          clearTimeout(z);
+        }
+        
+      </xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+    <script src="JS/14set-timeout-interval.js"></script>
+  </body>
+</html>
