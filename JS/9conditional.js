@@ -4,7 +4,7 @@ Equality Operator:    ==
 Strict Equality Operator:   ===
 Not Equal to Operator:  !=
 Strict Not Equal to Operator:   !==
-
+Ternary Operator 
 The strict equality ( === ) operator checks whether its two operands are equal, returning a Boolean result.
 
 */
@@ -101,6 +101,11 @@ if (licence || driverAge >= 18) {
 } else {
   console.log(`You can't Drive`);
 }
+
+//Ternary Operator
+age = 26;
+beverage = age >= 21 ? "Beer" : "Juice";
+console.log(beverage); // "Beer"
 
 //Switch
 let age = 21;
