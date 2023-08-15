@@ -17,7 +17,7 @@
         <div id="title">Source Code</div>
         <button id="copy" onclick="copyFunct()">Copy</button>
       </div>
-      <xmp></xmp>
+      <xmp id="code-box"></xmp>
     </div>
 
     <!-- Adding javaScript Source -->
