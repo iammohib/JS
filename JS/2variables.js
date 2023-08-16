@@ -1,5 +1,8 @@
 //Variables in jS and their behaviour
 /*
+variable:-  A value stored in memory
+            A memory location where data can be stored and retrieved
+            A named memory location for storing values
 var:- global scope
       can re-declare
       can re-assign
