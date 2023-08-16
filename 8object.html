@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object in JS</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">Object In JS</h1>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box">
+        //Object in JavaScript
+        //The syntaxs of creating object are following
+        const user1 = new Object(); // "object constructor" syntax
+        const user2 = {}; // "object literal" syntax
+        
+        const myObj = {
+          fName: "Mohd",
+          mName: "Mohibuddin",
+          lName: "Hussain",
+          "my age": 20,
+          happy: true,
+        };
+        console.log(myObj);
+        
+        //The syntax for accessing the property of an object is
+        //The dot notation (.)
+        console.log(myObj.mName);
+        
+        //Array-like notation ( obj[key])
+        console.log(myObj["mName"]);
+        console.log(myObj["my age"]);
+        
+        //updating array
+        myObj.mName = `mohib`;
+        
+        //creating element in array
+        myObj.favBook = `40 rules of love`;
+        
+        console.log(myObj)
+        
+      </xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+    <script src="JS/8object.js"></script>
+  </body>
+</html>

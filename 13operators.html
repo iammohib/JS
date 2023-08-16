@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator in JS</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">Operator in JS</h1>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box">
+        /*
+        -> IN 3+5,
+        -> '+' is operator & 3,5 are operand
+        
+        // Unary Operator
+        // Binary Operator
+        // Arithmatic Operators in JavaScript
+        */
+        
+        // Unary Operator
+        x = 5;
+        x = -x;
+        console.log(x);
+        
+        //Binary Operator
+        a = 34;
+        b = "harry";
+        c = a + b;
+        console.log(c);
+        
+        //Arithmatic Operators in JavaScript
+        var num1 = 5;
+        var num2 = 8;
+        console.log("The value of num1 + num2 is:", num1 + num2);
+        console.log("The value of num1 - num2 is: " + (num1 - num2));
+        console.log("The value of num1 * num2 is: " + num1 * num2);
+        console.log("The value of num1 / num2 is: " + num1 / num2);
+        console.log("The value of num1 % num2 is: " + num1 % num2);
+        console.log("The value of num1 ** num2 is: " + num1 ** num2);
+        
+        console.log("The value of num1++ is: " + num1++);
+        console.log("The value of ++num1 is: " + ++num1);
+        
+        console.log("The value of num2-- is: " + num2--);
+        console.log("The value of --num2 is: " + --num2);
+        
+        console.log("the value is", num1);
+        
+        /*
+        Assignment Operator
+        =
+        +=
+        -=
+        *=
+        /=
+        %=
+        **=
+        
+        String Operator
+        Concatination Operator: +
+        str + str2
+        
+        Comaprison Operator
+        ==
+        ===
+        !=
+        !==
+        >
+        <
+        <=
+        >=
+        ?
+        
+        Logical Operator
+        &&
+        ||
+        !
+        
+        Ternary Operator
+        variable = (condition) ? true Statement : false statement
+        
+        typeOf Operator:- return variable type
+        instanceOf Operator: return true or false
+        
+        Bitwise operator
+        its work on 32 bit number
+        */
+        
+      </xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+    <script src="JS/13operators.js"></script>
+  </body>
+</html>

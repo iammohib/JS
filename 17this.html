@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this in JS</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">this in JS</h1>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box">
+        /*
+        lexical this:- solving lexical this problem using arrow function
+        */
+        
+        const test = {
+          prop: 42,
+          func: function () {
+            return this.prop;
+          },
+        };
+        
+        console.log(test.func());
+        // Expected output: 42
+        
+        const stDetails = {
+          name: `mohib`,
+          age: 21,
+          func: function () {
+            //if we use normal funtion , the anwer will be undefined
+            setTimeout(() => {
+              console.log(`${this.name}`);
+            }, 1000);
+          },
+        };
+        stDetails.func();
+        
+        //lexical this
+        let obj={
+          greeting:'good day',
+          names:['aman','mohib','anoop','prince'],
+          greet(){
+              this.names.forEach(element => {
+                  console.log(this.greeting+' mr. '+element)
+              });
+          }
+        };
+        obj.greet()
+      </xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+    <script src="JS/17this.js"></script>
+  </body>
+</html>
