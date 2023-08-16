@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM in JS</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">BOM in JS</h1>
+    <button id="btn" onclick="mohibFunc()">mohib.co</button>
+    <button id="btn" onclick="reload()">reload</button>
+    <button id="btn" onclick="go()">go</button>
+    <button id="btn" onclick="back()">back</button>
+    <button id="btn" onclick="next()">next</button>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box"></xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+    <script src="js/19BOM.js"></script>
+  </body>
+</html>
