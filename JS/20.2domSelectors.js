@@ -40,12 +40,15 @@ span[0].style.display = "block";
 
 //===============get element by name===========
 const search = document.getElementsByName("search");
-console.log(search)
-search[0].setAttribute("placeholder","SEARCH")
+console.log(search);
+search[0].setAttribute("placeholder", "SEARCH");
 
 //============TECHNIQUE to learn==========
 const flexContainer = document.querySelector("#container");
 const fConCard = flexContainer.getElementsByClassName("card")[0];
 fConCard.style.color = "red";
 
-flexContainer.removeChild(flexContainer.getElementsByClassName("card")[1])
+async function rmChild(){
+    cardNo =parseInt(prompt("Enter Card No. which you want to delete: "))
+    flexContainer.removeChild(flexContainer.getElementsByClassName("card")[cardNo]);
+};
