@@ -1,7 +1,7 @@
 /*
 for loop
 forEach loop:- mainly for array
-for-of loop:- mainly for array,string
+for-of loop:- mainly for array,string, collections
 for-in loop:- mainly for object
 while loop
 do while loop
