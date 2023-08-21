@@ -1,7 +1,7 @@
 body {
   background-color: rgb(44, 44, 44);
 }
-#heading {
+#heading , #titleHead{
   display: flex;
   justify-content: center;
   align-items: center;

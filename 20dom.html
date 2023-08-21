@@ -28,11 +28,21 @@
       .content {
         margin: 5%;
       }
+      .bg{
+        background-color: yellow;
+      }
+      .color{
+        color: red;
+      }
+      .color2{
+        color: blue;
+      }
     </style>
   </head>
   <body>
     <!-- heading -->
-    <h1 id="heading">DOM</h1>
+    <div id="titleHead"><h1 id="heading">DOM</h1></div>
+    
     <form class="d-flex" role="search">
       <input
         class="form-control me-2"
@@ -46,7 +56,7 @@
     </form>
 
     <!-- card -->
-    <div id="container"  class="crousel">
+    <div id="container"  class="crousel lemon" data-author="mohib" data-book="the mohib inc">
       <div class="card">
         <div class="box1">
           <img
@@ -108,8 +118,13 @@
         navigator.clipboard.writeText(copyText.innerText);
       }
     </script>
+    <!-- <script src="js/20.0dom-basics.js"></script> -->
     <!-- <script src="js/20.1dom.js"></script> -->
     <!-- <script src="js/20.2domSelectors.js"></script> -->
-    <script src="js/20.3matches-closet.contains.js"></script>
+    <!-- <script src="js/20.3matches-closet.contains.js"></script> -->
+    <!-- <script src="js/20.4dom-attribute.js"></script> -->
+    <!-- <script src="js/20.5dom-insertion.js"></script> -->
+    <!-- <script src="js/20.6dom-insertAdjacent.js"></script> -->
+    <script src="js/20.7dom-class-methods.js"></script>
   </body>
 </html>

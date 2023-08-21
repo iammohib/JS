@@ -1,3 +1,10 @@
+/*
+element selectors:
+1. Single element selector
+2. Multiple element selector
+
+*/
+
 //=====dom manipulation by ID==========
 const container = document.getElementById("container");
 // console.log(container)
@@ -11,6 +18,12 @@ heading.innerHTML += `mohib`;
 const img = document.querySelector("img");
 img.src =
   "https://www.artinstitutes.edu/~/media/ai/main/images/publications/blog/onlinephotonov/photographyphoto.ashx?modified=20181123034155&la=en&hash=061F51B0825AEC249CED44DB5E32432D3FEA05C2";
+
+//parent-child
+let select2 = document.querySelector("#container>.card");
+console.log(select2);
+let selectt = document.querySelectorAll("#container>.card");
+console.log(selectt);
 
 //=====dom manipulation by query selector all==========
 const images = document.querySelectorAll("img");
@@ -48,7 +61,18 @@ const flexContainer = document.querySelector("#container");
 const fConCard = flexContainer.getElementsByClassName("card")[0];
 fConCard.style.color = "red";
 
-async function rmChild(){
-    cardNo =parseInt(prompt("Enter Card No. which you want to delete: "))
-    flexContainer.removeChild(flexContainer.getElementsByClassName("card")[cardNo]);
-};
+async function rmChild() {
+  cardNo = parseInt(prompt("Enter Card No. which you want to delete: "));
+  flexContainer.removeChild(
+    flexContainer.getElementsByClassName("card")[cardNo]
+  );
+}
+
+//============Nodevalue Data=========
+console.log("\n\n");
+const lastdata = document.body.lastChild.data;
+const firstdata = document.body.childNodes[1].nodeValue;
+console.log(firstdata);
+console.log(lastdata);
+
+console.log(document.body.textContent);
