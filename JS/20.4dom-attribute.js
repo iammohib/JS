@@ -1,3 +1,12 @@
+/*
+get Attribute
+has Attribute
+set Attribute
+remove Attribute
+Attribute
+dataset
+*/
+
 const id1 = document.getElementById("container");
 
 //========get Attribute==============

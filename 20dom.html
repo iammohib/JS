@@ -42,8 +42,28 @@
   <body>
     <!-- heading -->
     <div id="titleHead"><h1 id="heading">DOM</h1></div>
-    
-    <form class="d-flex" role="search">
+    <div id="table">
+      <table class="table flex-center">
+        <caption>Caption is here</caption>
+        <thead><tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr></thead>
+        <tbody><tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+        </tr></tbody>
+        <tfoot><tr>
+          <td>Centro comercial Moctezuma</td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+        </tr></tfoot>
+        
+      </table>
+    </div>
+    <form class="d-flex flex-center" role="search">
       <input
         class="form-control me-2"
         name="search"
@@ -119,12 +139,12 @@
       }
     </script>
     <!-- <script src="js/20.0dom-basics.js"></script> -->
-    <!-- <script src="js/20.1dom.js"></script> -->
-    <!-- <script src="js/20.2domSelectors.js"></script> -->
+    <!-- <script src="js/20.1dom-manipulation.js"></script> -->
+    <!-- <script src="js/20.2dom-nodes-child.js"></script> -->
     <!-- <script src="js/20.3matches-closet.contains.js"></script> -->
     <!-- <script src="js/20.4dom-attribute.js"></script> -->
-    <!-- <script src="js/20.5dom-insertion.js"></script> -->
+    <script src="js/20.5dom-insertion.js"></script>
     <!-- <script src="js/20.6dom-insertAdjacent.js"></script> -->
-    <script src="js/20.7dom-class-methods.js"></script>
+    <!-- <script src="js/20.7dom-class-methods.js"></script> -->
   </body>
 </html>

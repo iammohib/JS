@@ -1,3 +1,9 @@
+/*
+Matches
+closest
+contains
+*/
+
 //=================Matches()=======================
 // it checks about another css selector, if the same element have or not
 const container = document.getElementById(`container`);

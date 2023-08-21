@@ -1,3 +1,7 @@
+/*
+insertAdjacentHTML
+*/
+
 let titleHead = document.getElementById("titleHead");
 console.log(titleHead)
 
