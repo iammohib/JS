@@ -60,3 +60,7 @@ body {
   margin: 10px auto;
   border: 1px solid white;
 }
+.btnCenter{
+  display: block;
+  margin: 10px auto;
+}
