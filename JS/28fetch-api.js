@@ -16,3 +16,7 @@ catApi
 }
 func00()
 document.getElementsByClassName("btnCenter")[0].addEventListener("click", func00)
+
+// setInterval(() => {
+//   func00()
+// }, 1000);
