@@ -16,8 +16,8 @@ const stDetails = {
   name: `mohib`,
   age: 21,
   func: function () {
-    //if we use normal funtion , the anwer will be undefined
     setTimeout(() => {
+      //if we use normal funtion in set-timeout, the anwer will be undefined
       console.log(`${this.name}`);
     }, 1000);
   },
