@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Events</title>
+    <style>
+        body.active2 {
+            color: white;
+            background-color: rgb(22, 21, 21);
+        }
+
+        .container {
+            border: 2px solid black;
+        }
+
+        ion-icon {
+            font-size: 34px;
+        }
+
+        .theme {
+            position: fixed;
+            top: 20px;
+            right: 80px;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #4d5bf9;
+            cursor: pointer;
+        }
+
+        .theme.active2 {
+            background: rgb(37, 36, 36);
+        }
+
+        .theme ion-icon {
+            position: absolute;
+            font-size: 34px;
+            color: #fff;
+            display: none;
+        }
+
+        .theme ion-icon.sun,
+        .theme.active2 ion-icon.moon {
+            display: block;
+        }
+
+        .theme ion-icon.moon,
+        .theme.active2 ion-icon.sun {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="theme">
+        <ion-icon name="sunny-outline" class="sun"></ion-icon>
+        <ion-icon name="moon-outline" class="moon"></ion-icon>
+    </div>
+    <div class="container">
+        <h1>Heading <div class="btn" onclick="toggleAct()">
+            <ion-icon name="chevron-down-circle-outline" class="down"></ion-icon>
+            <ion-icon name="chevron-up-circle-outline" class="up"></ion-icon></div>
+        </h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, temporibus. Molestias
+            molestiae iste exercitationem sequi sed a earum reprehenderit quidem id nemo maiores eum repudiandae
+            tenetur, debitis deleniti quae beatae, deserunt dignissimos ullam. Ea obcaecati, velit iure et modi dolorum
+            maxime dolorem esse nulla doloribus.</p>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        let theme = document.querySelector('.theme');
+        let bgBody = document.querySelector('body');
+        theme.onclick = function () {
+            theme.classList.toggle('active2');
+            bgBody.classList.toggle('active2');
+        }
+
+        let para = document.getElementById('para')
+        para.addEventListener(
+            'mouseover', function run(){
+                alert('Click there to learn more')
+            }
+        )
+        
+        function toggleAct() {
+            let btn = document.getElementById('btn')
+            let para = document.getElementById('para')
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+            }
+            else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

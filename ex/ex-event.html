@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>57.1js-listenningevent</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            background-color: cornsilk;
+        }
+
+        #faq {
+            position: relative;
+            background-color: aqua;
+            padding: 12px;
+            box-shadow: 0px 1px 11px 6px rgb(8 9 3 / 50%)
+        }
+
+        .container {
+            background-color: rgb(228, 255, 255);
+            margin: 20px 50px;
+            border: 2px solid black;
+        }
+
+        .container>h2 {
+            margin: 20px;
+        }
+
+        #para {
+            margin: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="faq">Frequently asked Questions-</h1>
+    
+    <div class="container">
+        <h2>How can we help you? <button id="btn" onclick="toggleHide()">show/hide</button></h2>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa sapiente velit, a quibusdam quae
+            eaque nesciunt magnam odio! Doloremque cumque accusamus reprehenderit, unde consectetur aperiam tempora in,
+            autem amet facilis, velit ducimus recusandae voluptatum?</p>
+    </div>
+    <script>
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'block') {
+                para.style.display = 'block';
+            }
+            else {
+                para.style.display = 'none';
+            }
+        }
+
+
+        // let para = document.getElementById('para');
+        // para.addEventListener('mouseover', function run() {
+        //     alert('hi..buddy mouse inside')
+        // })
+        // para.addEventListener('mouseout', function run() {
+        //     alert('hi..buddy mouseout')
+        // })
+
+
+    </script>
+</body>
+
+</html>

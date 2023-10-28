@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb on off</title>
+    <style>
+      .bulb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+      }
+      div{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bulb">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, cupiditate dolor adipisci minus cum exercitationem corrupti hic necessitatibus consectetur alias quod nam quam omnis, minima maxime magnam illum, accusamus dolorum quasi dolorem iusto quas? Architecto facere et doloribus aperiam nisi vero labore maiores ullam maxime eos dignissimos accusantium, quia quibusdam. Harum beatae necessitatibus veniam impedit perspiciatis dolor aspernatur accusantium reiciendis iusto amet temporibus architecto consequuntur corporis minus aperiam modi, natus sed vel nihil fugiat maiores eveniet sequi optio! Quam amet, ex enim sequi commodi, laborum adipisci nemo culpa soluta dolor odit minus fugiat est ad ipsum dolorum modi provident dolore! Voluptates similique suscipit a, perspiciatis iusto praesentium vitae delectus reprehenderit animi ullam. Aliquid neque dolorem dignissimos recusandae saepe reprehenderit sint praesentium quia quod. Eos architecto consequuntur minima obcaecati accusantium fuga quo est rerum, sed aliquam amet doloribus ipsa dolor officiis unde inventore quas omnis, libero quibusdam eveniet cupiditate. Omnis eligendi architecto recusandae facere, non deserunt magni quo expedita excepturi nam repellat dolorum illum officiis magnam aliquam, officia accusantium libero numquam fuga rem debitis placeat obcaecati beatae. Rem a commodi repudiandae incidunt enim blanditiis eius voluptatem architecto placeat doloribus! Eaque deserunt reprehenderit vitae dolore sed debitis error laborum praesentium illo optio!</div>
+
+    <script>
+        const bulbSwitch = document.getElementById("bulb");
+        const bodySwitch = document.body;
+        
+        setInterval(()=>{
+            // bulbSwitch.classList.toggle("bulb")
+            bodySwitch.classList.toggle("bulb")
+        },1000)
+    </script>
+  </body>
+</html>
