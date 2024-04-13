@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Your Info</title>
+</head>
+<body>
+    <h1>Your info:</h1>
+    <p id="content"></p>
+</body>
+    <script>
+        let name=prompt("Enter Your Name");
+        let age=prompt("Enter Your Age");
+        let gender=prompt("Enter Your Gender");
+
+        let info={
+        }
+        info.name=name;
+        info.age=age;
+        info.gender=gender;
+
+        console.log(info)
+        // document.getElementById("content").innerHTML=info.name+"<br>"+info.age+"<br>"+info.gender;
+
+
+        text=``;
+        for (const key in info) {
+            text+= key+": "+info[key]+"<br>"
+        }
+        document.getElementById("content").innerHTML=text;
+    </script>
+</html>

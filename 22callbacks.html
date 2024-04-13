@@ -11,14 +11,21 @@
     <h1 id="heading">Callbacks</h1>
 
     <!-- card -->
-    <div class="card" style="width: 18rem;">
-        <img src="https://statusneo.com/wp-content/uploads/2023/02/MicrosoftTeams-image551ad57e01403f080a9df51975ac40b6efba82553c323a742b42b1c71c1e45f1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://statusneo.com/wp-content/uploads/2023/02/MicrosoftTeams-image551ad57e01403f080a9df51975ac40b6efba82553c323a742b42b1c71c1e45f1.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
+    </div>
 
     <!-- source code box -->
     <div id="box">
@@ -30,12 +37,24 @@
     </div>
 
     <!-- Adding javaScript Source -->
+    <script src="js/22callbacks.js"></script>
+
     <script>
       function copyFunct() {
         const copyText = document.getElementById("code-box");
         navigator.clipboard.writeText(copyText.innerText);
       }
     </script>
-    <script src="js/22callbacks.js"></script>
+
+    <script>
+      fetch("js/22callbacks.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/22callbacks.js:", error)
+        );
+    </script>
   </body>
 </html>

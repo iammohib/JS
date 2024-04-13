@@ -18,51 +18,28 @@
         <button id="copy" onclick="copyFunct()">Copy</button>
       </div>
 
-      <xmp id="code-box">
-        //----------Printing basic code in the console----//
-        console.log(`Hello World`);
-        
-        // ----------Template Literals-----//
-        const name = `Aman`;
-        const age = 21;
-        
-        const description = `${name} is a very bright student. His age is ${age}.
-        Disclaimer: Template Literals takes white-spaces and enter seriously`;
-        console.log(description);
-        
-        //----------Console Methods-------//
-        console.time(`Time Taken`);
-        
-        console.table({
-          name: `mohib`,
-          age: `21`,
-        });
-        
-        console.group(`Student Details`);
-        console.log(`mohib`);
-        console.log(`21`)
-        console.groupEnd('Student Details')
-        
-        console.timeEnd(`Time Taken`);
-
-
-        /* Most common programming case types:
-        1. camelCase  
-        2. kebab-case
-        3. snake_case 
-        4. PascalCase
-        */
-        
-    </xmp>
+      <pre id="code-box"></pre>
     </div>
 
     <!-- Adding javaScript Source -->
+    <script src="./JS/1intro.js"></script>
+
     <script>
       function copyFunct() {
         const copyText = document.getElementById("code-box");
         navigator.clipboard.writeText(copyText.innerText);
       }
     </script>
-    <script src="./JS/1intro.js"></script>
+
+    <script>
+      fetch("./JS/1intro.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching ./JS/1intro.js:", error)
+        );
+    </script>
   </body>
 </html>

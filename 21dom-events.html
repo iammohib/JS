@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <link rel="stylesheet" href="CSS/phone.css" />
     <style>
-      #colorBox{
+      #colorBox {
         width: 80vw;
         height: 200px;
         border: 2px solid white;
@@ -17,17 +17,16 @@
   <body>
     <!-- heading -->
     <h1 id="heading">Events in JS</h1>
+
     <button id="btn">Click Me</button>
     <button class="btnCenter">Event-Listener</button>
-    <div id="content">
-      Try to check this box: <input type="checkbox" id="myCheckbox" />
 
+    <div id="content">
       <p>
+        Try to check this box: <input type="checkbox" id="myCheckbox" />
         Toggling a checkbox is the default action of clicking on a checkbox. The
         preventDefault() method prevents this from happening.
       </p>
-    </div>
-      
     </div>
 
     <!-- source code box -->
@@ -40,12 +39,24 @@
     </div>
 
     <!-- Adding javaScript Source -->
+    <script src="js/21dom-events.js"></script>
+
     <script>
       const copyFunct = () => {
         const copyText = document.getElementById("code-box");
         navigator.clipboard.writeText(copyText.innerText);
       };
     </script>
-    <script src="js/21dom-events.js"></script>
+
+    <script>
+      fetch("js/21dom-events.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/21dom-events.js:", error)
+        );
+    </script>
   </body>
 </html>

@@ -28,5 +28,16 @@
       }
     </script>
     <script src="js/26error-object.js"></script>
+
+    <script>
+      fetch("js/26error-object.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/26error-object.js:", error)
+        );
+    </script>
   </body>
 </html>

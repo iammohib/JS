@@ -28,5 +28,16 @@
       }
     </script>
     <script src="js/25try-catch.js"></script>
+
+    <script>
+      fetch("js/25try-catch.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/25try-catch.js:", error)
+        );
+    </script>
   </body>
 </html>

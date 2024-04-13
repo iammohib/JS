@@ -1,28 +1,38 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: rgb(44, 44, 44);
 }
-#heading , #titleHead{
+
+#heading{
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
   font-size: 42px;
-  color: rgb(251, 201, 27);
+  color: white;
   flex-wrap: wrap;
+  padding: 20px;  
 }
+
 #box {
+  margin: 20px auto;
   width: 80vw;
   background-color: rgb(6, 6, 42);
-  align-items: center;
   color: white;
-  margin: auto;
-  overflow: scroll;
+  border-radius: 20px;
 }
+
 #title_bar {
   display: flex;
   background-color: rgb(10, 10, 10);
   position: sticky;
   top: 0;
   left: 0;
+  border-radius: 20px;
 }
 #title {
   flex: 1 1 auto;
@@ -33,6 +43,7 @@ body {
 }
 #code-box {
   font-size: 16px;
+  /* overflow: scroll; */
 }
 #content {
   color: white;

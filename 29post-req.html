@@ -28,5 +28,16 @@
       }
     </script>
     <script src="js/29post-req.js"></script>
+
+    <script>
+      fetch("js/29post-req.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/29post-req.js:", error)
+        );
+    </script>
   </body>
 </html>

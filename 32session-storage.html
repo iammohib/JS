@@ -28,5 +28,16 @@
       }
     </script>
     <script src="js/32session-storage.js"></script>
+
+    <script>
+      fetch("js/32session-storage.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/32session-storage.js:", error)
+        );
+    </script>
   </body>
 </html>

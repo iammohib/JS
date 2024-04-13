@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Main.js Code</title>
+</head>
+<body>
+    <h1>Main.js Code Display</h1>
+    <pre id="code-container"></pre>
+    <script>
+        fetch('main.js')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('code-container').textContent = data;
+            })
+            .catch(error => console.error('Error fetching main.js:', error));
+    </script>
+</body>
+</html>

@@ -28,5 +28,16 @@
       }
     </script>
     <script src="js/27finally-clause.js"></script>
+
+    <script>
+      fetch("js/27finally-clause.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/27finally-clause.js:", error)
+        );
+    </script>
   </body>
 </html>

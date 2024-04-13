@@ -12,8 +12,7 @@
     <h1 id="heading">Fetch API</h1>
     <div>
       <button class="btnCenter">one more</button>
-      <ul id="cat-fact">
-      </ul>
+      <ul id="cat-fact"></ul>
     </div>
 
     <!-- source code box -->
@@ -33,5 +32,16 @@
       }
     </script>
     <script src="js/28fetch-api.js"></script>
+
+    <script>
+      fetch("js/28fetch-api.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching js/28fetch-api.js:", error)
+        );
+    </script>
   </body>
 </html>

@@ -7,6 +7,6 @@ a = document.all;
 //     console.log(element)
 // });
 a = document.links; //returns link element
-a = document.links[1];
-a = document.links[1].href; //return link url
+a = document.links[0];
+a = document.links[0].href; //return link url
 console.log(a);
