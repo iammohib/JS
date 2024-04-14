@@ -1,38 +1,46 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background-color: rgb(44, 44, 44);
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(73, 56, 234, 1) 100%
+  );
 }
 
-#heading{
+#heading {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   font-size: 42px;
-  color: white;
+  color: rgb(251, 201, 27);
   flex-wrap: wrap;
-  padding: 20px;  
+  padding: 20px;
 }
 
 #box {
   margin: 20px auto;
   width: 80vw;
-  background-color: rgb(6, 6, 42);
+  background-color: rgb(6, 6, 132);
   color: white;
   border-radius: 20px;
+  overflow: scroll;
+  overflow-y: auto; /*Hide vertical scrollbar */
+  overflow-x: auto; /* Hide horizontal scrollbar */
 }
 
 #title_bar {
   display: flex;
-  background-color: rgb(10, 10, 10);
+  background-color: black;
   position: sticky;
   top: 0;
   left: 0;
-  border-radius: 20px;
+  border-radius: 20px 0px 20px 0px;
 }
 #title {
   flex: 1 1 auto;
@@ -41,9 +49,16 @@ body {
 #copy {
   padding: 10px 15px;
 }
+#copy:hover {
+  background-color: rgb(238, 212, 119);
+}
+#copy:active {
+  color: white;
+  background-color: rgb(185, 146, 9);
+}
 #code-box {
   font-size: 16px;
-  /* overflow: scroll; */
+  margin: 40px;
 }
 #content {
   color: white;
@@ -59,11 +74,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-#btn{
+#btn {
   margin: 10px auto;
   display: block;
 }
-.flex-center{
+.flex-center {
   text-align: center;
   color: white;
   display: block;
@@ -71,7 +86,7 @@ body {
   margin: 10px auto;
   border: 1px solid white;
 }
-.btnCenter{
+.btnCenter {
   display: block;
   margin: 10px auto;
 }
