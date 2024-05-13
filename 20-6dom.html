@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Basics</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+    <style>
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        margin: 20px;
+        width: 20vw;
+        border: 2px solid black;
+        background-color: beige;
+        border-radius: 5%;
+      }
+      img {
+        border-radius: 6%;
+        margin: 0;
+        width: 20vw;
+      }
+
+      .content {
+        margin: 5%;
+      }
+      .bg {
+        background-color: yellow;
+      }
+      .color {
+        color: red;
+      }
+      .color2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- heading -->
+    <div id="titleHead"><h1 id="heading">DOM</h1></div>
+
+    <div id="table">
+      <table class="table flex-center">
+        <caption>
+          Caption is here
+        </caption>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="https://google.com" target="_blank">Google</a></td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <form class="d-flex flex-center" role="search">
+      <input
+        class="form-control me-2"
+        name="search"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-success" type="submit">Search</button>
+      <button
+        class="btn btn-outline-success"
+        name="dlt"
+        id="btn"
+        onclick="rmChild()"
+      >
+        Delete a Card
+      </button>
+    </form>
+
+    <!-- card -->
+    <div
+      id="container"
+      class="crousel lemon"
+      data-author="mohib"
+      data-book="the mohib inc"
+    >
+      <div class="card">
+        <div class="box1">
+          <img
+            src="https://www.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1520x800.webp"
+            alt=""
+          />
+          <div class="content">
+            <h1>Card 1</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+              officia debitis laboriosam eum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt=""
+        />
+        <div class="content">
+          <h1>Card 2</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            officia debitis laboriosam eum.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="http://www.shadowsphotography.co/wp-content/uploads/2017/12/photography-01-800x400.jpg"
+          alt=""
+        />
+        <div class="content">
+          <h1>Card 3</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo
+            officia debitis laboriosam eum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+      <xmp id="code-box"></xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script src="js/20.6dom-insertAdjacent.js"></script>
+
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+
+    <script>
+      fetch("js/20.6dom-insertAdjacent.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) => console.error("Error fetching js/20.6dom-insertAdjacent.js:", error));
+    </script>
+  </body>
+</html>
