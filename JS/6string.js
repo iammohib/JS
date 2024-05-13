@@ -19,8 +19,9 @@ indexOf     string.indexOf(searchvalue, start)
 lastIndexOf string.lastIndexOf(searchvalue, start)
 search      variable.serach(searchvalue, start:optional)
             variable.serach(/searchvalue/gi)   //case-insensitive
-match      variable.match(searchvalue, start:optional)
+match       variable.match(searchvalue, start:optional)
             variable.match(/searchvalue/gi)   //case-insensitive
+matchAll()  Returns an iterator of all matches, providing detailed information about each match. Returns an empty iterator if no match is found.
 slice       variable.slice(start, end)
 substring   variable.substring(start, end)
 substr      variable.substr(start, length)
@@ -81,11 +82,11 @@ console.log(x); //73
 console.log(str[0]); //I
 
 //JavaScript String Search
-//----------indexOf(searchvalue, start)-------
+//----------indexOf(searchvalue, start:optional)-------
 x = str.indexOf(`am`, 0);
 console.log(x); //2
 
-//----------lastIndexOf(searchvalue, start)-------
+//----------lastIndexOf(searchvalue, start:optional)-------
 //it start finding string, from last
 x = str.lastIndexOf(`am`, 21);
 console.log(x); //19
@@ -100,6 +101,26 @@ console.log(x);
 
 x = str.match(/mohib/gi);
 console.log(x); //[ 'Mohib' ]
+
+//----------variable.matchAll(searchvalue, start:optional)----
+let text = "Hello JavaScript, welcome to our world best JavaScript course";
+// let matchResult = text.matchAll("javascript");
+let matchResult = text.matchAll("JavaScript");
+// here the js converts the normal text into regular expression text.match(/JavaScript/g); also adds the g flag at the end
+
+console.log(...matchResult);
+
+for (let item of matchResult) {
+  console.log(item[0]);
+}
+
+for (let index of matchResult) {
+  console.log(index.index);
+}
+
+for (let { index } of matchResult) {
+  console.log(index);
+}
 
 //----------variable.slice(start, end)-------------
 x = str.slice(5, 10);
@@ -118,7 +139,7 @@ console.log(x); //I am
 x = str.substring(25);
 console.log(x); //tware Developer
 
-//----------variable.substr(start, length)---------
+//----------variable.substr(start, length:optional)---------
 x = str.substr(5);
 console.log(x); //Mohibuddin. I am Software Developer
 
@@ -144,7 +165,7 @@ x = str.replace(/am/gi, `m`);
 console.log(x); //I m Mohibuddin. I m Software Developer
 
 //---------Escape character-------
-x = 'We are the so-called "Vikings" from the north.';
+x = "We are the so-called \"Vikings\" from the north.";
 console.log(x);
 
 //trim()

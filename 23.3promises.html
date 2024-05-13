@@ -21,7 +21,7 @@
     </div>
 
     <!-- Adding javaScript Source -->
-    <script src="js/23.3promises-chaining.js"></script>
+    <script src="js/23-3promises-chaining.js"></script>
 
     <script>
       function copyFunct() {
@@ -31,13 +31,13 @@
     </script>
 
     <script>
-      fetch("js/23.3promises-chaining.js")
+      fetch("js/23-3promises-chaining.js")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("code-box").textContent = data;
         })
         .catch((error) =>
-          console.error("Error fetching js/23.3promises-chaining.js:", error)
+          console.error("Error fetching js/23-3promises-chaining.js:", error)
         );
     </script>
   </body>

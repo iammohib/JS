@@ -24,6 +24,15 @@ console.groupEnd("Student Details");
 
 console.timeEnd(`Time Taken`);
 
+//----------Custom Console Logs-------//
+const bgcolor = "Yellow";
+const color = "red";
+const padding = "9px";
+
+const css = `background-color: ${bgcolor};color: ${color}; padding:${padding}`
+
+console.log(`%cI am Mohib`,css)
+
 /* Most common programming case types:
 1. camelCase  
 2. kebab-case

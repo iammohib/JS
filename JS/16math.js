@@ -46,10 +46,14 @@ console.log(y);
 
 //-------------Ceil and Floor---------
 x = Math.ceil(5.78);
+x2 = Math.ceil(-5.78);
 y = Math.floor(5.78);
+y2 = Math.floor(-5.78);
 
-console.log(x);
-console.log(y);
+console.log(x); // 6
+console.log(x2); // -5
+console.log(y); // 5
+console.log(y2); // -6
 
 //------------abs------------
 x = Math.abs(5.78);
@@ -61,8 +65,10 @@ console.log(y);
 //-------------trunc------------
 x = Math.trunc(8.67);
 y = Math.trunc(8.17);
-console.log(x);
-console.log(y);
+z = Math.trunc(-8.17);
+console.log(x); // 8
+console.log(y); // 8
+console.log(z); // -8
 
 //------------trigonomatric function------------
 x = Math.sin(Math.PI / 2);

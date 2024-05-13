@@ -52,7 +52,7 @@ let arr3 = [`concatination`, 23, 45, `aman`];
 y = arr3.reverse();
 console.log(y); //[ 'aman', 45, 23, 'concatination' ]
 
-//----------cocat()------------
+//----------concat()------------
 //makes change in actual array, here in `arr2`
 z = arr2.concat(arr3);
 console.log(z); //[ 11, 2, 5, 9, 'aman', 45, 23, 'concatination' ]
@@ -63,7 +63,7 @@ arr = [`aman`, `anoop`];
 arr[2] = `mohib`;
 console.log(arr); //[ 'aman', 'anoop', 'mohib' ]
 
-//push,pop,shift,unshift etc
+//push,pop,shift,unshift etc(make changes in actual array)
 let st = [`aman`, `anoop`, `alok`];
 console.log(st); //[ 'aman', 'anoop', 'alok' ]
 
@@ -84,6 +84,7 @@ x = st.unshift(`mohib`);
 console.log(x, st); //3 [ 'mohib', 'anoop', 'alok' ]
 
 //splice(start: number, deleteCount?: number)
+//make changes in actual array
 arr = [`apple`, `banana`, `grapes`];
 x = arr.splice(1, 1);
 console.log(x, arr); //[ 'banana' ] [ 'apple', 'grapes' ]
