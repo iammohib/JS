@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse event</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="rectangleBox"></div>
+    <button class="btnClickMe">Click Me</button>
+
+    <!-- Script -->
+    <script>
+      rectangleBox = document.getElementById("rectangleBox");
+      btnClickMe = document.getElementsByClassName("btnClickMe");
+
+      btnClickMe[0].onclick = () => (rectangleBox.className = "bgblue");
+      btnClickMe[0].ondblclick = () => (rectangleBox.className = "bggreen");
+      btnClickMe[0].oncontextmenu = () => (rectangleBox.className = "bgyellow");
+
+    //   rectangleBox.onmouseenter = () => {
+    //     console.log("onmouseenter");
+    //     // rectangleBox.className = "enter";
+    //   };
+    //   rectangleBox.onmouseleave = () => {
+    //       console.log("onmouseleave");
+    //     //   rectangleBox.className = "leave";
+    //     };
+    //     rectangleBox.addEventListener("mousemove", function (params) {
+    //       console.log("mousemove");
+    //     // rectangleBox.style.backgroundColor = `rgb(${params.offsetX},${params.offsetY},154)`;
+    //   });
+
+    //   rectangleBox.onmouseover = () => {
+    //     console.log("onmouseover");
+    //     // rectangleBox.className = "over";
+    //   };
+    //   rectangleBox.onmouseout = () => {
+    //     console.log("onmouseout");
+    //     // rectangleBox.className = "out";
+    //   };
+      rectangleBox.onmousedown = () => {
+        console.log("onmousedown");
+        // rectangleBox.className = "down";
+      };
+      rectangleBox.onmouseup = () => {
+        console.log("onmouseup");
+        // rectangleBox.className = "up";
+      };
+    </script>
+  </body>
+</html>

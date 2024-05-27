@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" name="task" id="task">
+      <button onclick="add()">Add</button>
+    </div>
+    <div id="taskList"></div>
+    <script>
+      const add = () => {
+        taskElem = document.getElementById("task");
+        task = taskElem.value;
+        // console.log(task);
+        taskList = document.getElementById('taskList')
+        let newTask = document.createElement('p');
+        newTask.innerText=task
+        taskList.append(newTask)
+        taskElem.value = ""
+      };
+
+      let taskList = document.getElementById('taskList');
+      taskList.addEventListener('click',(event)=>{
+        console.log(event.target);
+        event.target.setAttribute("style",'text-decoration: line-through')
+      })
+    </script>
+  </body>
+</html>
