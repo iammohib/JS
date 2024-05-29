@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Generator</title>
+    <style>
+      body {
+        background-image: linear-gradient(to right, #53c1d2, #5aeb66);
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #code , #msg{
+        background-color: rgb(21, 21, 21);
+        max-width: fit-content;
+        margin: auto;
+        color: white;
+        padding: 20px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px;
+      }
+      .msg {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h3 class="center msg" id="msg">Code Copied to clipboard!</h3>
+      <div class="center">
+        <button id="btn1">#53C1D2</button>
+        <button id="btn2">#5AEB66</button>
+      </div>
+      <p class="center">Click the code to copy</p>
+      <p id="code" class="center">
+        background-image: linear-gradient(to right,<span id="btn1code"
+          >#53C1D2</span
+        >,<span id="btn2code">#5AEB66</span>);
+      </p>
+    </div>
+
+    <script>
+      // Accessing the element
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+      const code = document.getElementById("code");
+      const msg = document.getElementById("msg")
+      const hexValues = [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+      ];
+
+      // Hex-Value generator
+      generateHexValue = () => {
+        let hexCode = "#";
+        for (let index = 0; index < 6; index++) {
+          //random number btw (a,b)=a+(b-a)*Math.random()
+          let a2 = 0;
+          let b2 = 15;
+          let r0_15 = Math.round(a2 + (b2 - a2) * Math.random());
+          hexCode += hexValues[r0_15];
+        }
+        return hexCode;
+      }
+
+      // Button-1 hex code generator
+      handleBtn1 = () => {
+        btn1.innerText = generateHexValue();
+        handleGradient();
+      };
+
+      // Button-2 hex code generator
+      handleBtn2 = () => {
+        btn2.innerText = generateHexValue();
+        handleGradient();
+      };
+
+      // Body BG gradient apply,
+      handleGradient = () => {
+        // Change BG color
+        document.body.style.background = `linear-gradient(to right, ${btn1.innerText}, ${btn2.innerText})`;
+
+        // Change gradient source code
+        document.getElementById("btn1code").innerText = btn1.innerText;
+        document.getElementById("btn2code").innerText = btn2.innerText;
+      };
+
+      // Click the code to copy function
+      handleCopyCode = () => {
+        code.select();
+        // Copy the text inside the code field
+        navigator.clipboard.writeText(code.innerText);
+
+        msg.classList.toggle("msg")
+        setTimeout(()=>{
+            msg.classList.toggle("msg")
+        },(500))
+      };
+
+      // Add event listener
+      btn1.addEventListener("click", handleBtn1);
+      btn2.addEventListener("click", handleBtn2);
+      code.addEventListener("click", handleCopyCode);
+    </script>
+  </body>
+</html>

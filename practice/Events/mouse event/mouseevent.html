@@ -19,34 +19,34 @@
       btnClickMe[0].ondblclick = () => (rectangleBox.className = "bggreen");
       btnClickMe[0].oncontextmenu = () => (rectangleBox.className = "bgyellow");
 
-    //   rectangleBox.onmouseenter = () => {
-    //     console.log("onmouseenter");
-    //     // rectangleBox.className = "enter";
-    //   };
-    //   rectangleBox.onmouseleave = () => {
-    //       console.log("onmouseleave");
-    //     //   rectangleBox.className = "leave";
-    //     };
-    //     rectangleBox.addEventListener("mousemove", function (params) {
-    //       console.log("mousemove");
-    //     // rectangleBox.style.backgroundColor = `rgb(${params.offsetX},${params.offsetY},154)`;
-    //   });
+      rectangleBox.onmouseenter = () => {
+        console.log("onmouseenter");
+        rectangleBox.style.borderRadius = '50%'
+      };
+      rectangleBox.onmouseleave = () => {
+          console.log("onmouseleave");
+          rectangleBox.style.borderRadius = '0%'
+        };
+        rectangleBox.addEventListener("mousemove", function (params) {
+          console.log("mousemove");
+        document.body.style.backgroundColor = `rgb(${params.offsetX},${params.offsetY},154)`;
+      });
 
-    //   rectangleBox.onmouseover = () => {
-    //     console.log("onmouseover");
-    //     // rectangleBox.className = "over";
-    //   };
-    //   rectangleBox.onmouseout = () => {
-    //     console.log("onmouseout");
-    //     // rectangleBox.className = "out";
-    //   };
+      rectangleBox.onmouseover = () => {
+        console.log("onmouseover");
+        rectangleBox.classList.add("over");
+      };
+      rectangleBox.onmouseout = () => {
+        console.log("onmouseout");
+        rectangleBox.classList.add("out");
+      };
       rectangleBox.onmousedown = () => {
         console.log("onmousedown");
-        // rectangleBox.className = "down";
+        rectangleBox.classList.add("down");
       };
       rectangleBox.onmouseup = () => {
         console.log("onmouseup");
-        // rectangleBox.className = "up";
+        rectangleBox.classList.add("up");
       };
     </script>
   </body>

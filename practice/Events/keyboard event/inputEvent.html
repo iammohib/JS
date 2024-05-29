@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Event</title>
+    <style>
+      #container {
+        text-align: center;
+      }
+      .inputText {
+        display: block;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>type `CTRL` to refresh</p>
+    <div id="container">
+      <input
+        type="text"
+        name="username"
+        placeholder="Type something..."
+        class="inputText"
+        id="inputText"
+        autocomplete="off"
+      />
+      <div class="output">
+        <p>inputValue:<span class="inputValue"></span></p>
+        <p>inputName:<span class="inputName"></span></p>
+        <p>inputType:<span class="inputType"></span></p>
+        <p>eventType:<span class="eventType"></span></p>
+      </div>
+    </div>
+
+    <script>
+      const handleInput = (e) => {
+        console.log(e);
+        document.querySelector(".inputValue").innerText = ` ${e.target.value}`;
+        document.querySelector(".inputName").innerText = ` ${e.target.name}`;
+        document.querySelector(".inputType").innerText = ` ${e.inputType}`;
+        document.querySelector(".eventType").innerText = ` ${e.type}`;
+      };
+      const inputText = document.getElementById("inputText");
+    //   inputText.addEventListener("input", handleInput);
+      inputText.addEventListener("change", handleInput);
+
+      //   press `CTRL' to refresh the page
+      document.body.addEventListener("keydown", (e) => {
+        if (e.keyCode === 17) {
+          location.reload();
+        }
+      });
+    </script>
+  </body>
+</html>
