@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .centerdiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #taskList {
+        display: inline-block;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centerdiv">
+      <input type="text" name="task" id="task" />
+      <button onclick="add()">Add</button>
+    </div>
+    <div class="centerdiv">
+      <div id="taskList"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

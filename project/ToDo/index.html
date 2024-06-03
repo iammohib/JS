@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(14, 14, 14);
+        color: white;
+      }
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px;
+      }
+      /* #addToDo{
+        border: 2px solid red;
+      } */
+      #addToDo input[type="text"] {
+        border-radius: 15px;
+        padding: 10px;
+      }
+      #btn {
+        border-radius: 15px;
+        padding: 10px;
+        background-color: rgb(234, 234, 0);
+      }
+      #btn:hover {
+        background-color: rgb(219, 219, 0);
+      }
+      #btn:active {
+        background-color: black;
+        color: white;
+      }
+      #toDoList {
+        padding: 15px;
+        /* border: 2px solid red; */
+      }
+      #toDoList div {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="addToDo">
+        <input type="text" name="task" id="task" autocomplete="off" />
+        <button id="btn" onclick="add()">Add</button>
+      </div>
+      <div id="toDoList">
+        <div>i am div</div>
+        <div>i am div mohibu</div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
