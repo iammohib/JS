@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: linear-gradient(to right, #53c1d2, #5aeb66);
+      }
+      #container {
+        color: white;
+        /* width: 600px;
+        height: 400px; */
+        margin: 100px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        /* background-color: #09480e; */
+      }
+      h1 {
+        padding: 10px;
+        margin: 10px;
+        font-size: 70px;
+      }
+      button {
+        width: 80px;
+        padding: 10px;
+        margin: 10px;
+        color: white;
+      }
+      #lapdata {
+        color: white;
+      }
+      .start {
+        background-color: blue;
+      }
+      .stop {
+        background-color: rgb(192, 57, 57);
+      }
+
+      .reset {
+        background-color: red;
+      }
+      .lapfade {
+        background-color: rgb(130, 241, 130);
+      }
+      .lap {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="num">0</h1>
+      <div>
+        <button id="btn1" class="start">Start</button>
+        <button id="btn2" class="lapfade">Lap</button>
+      </div>
+      <div id="lapdata"></div>
+    </div>
+    <script>
+      let num = 0;
+      let intervalId;
+
+      // Start Function
+      const startFunc = () => {
+        intervalId = setInterval(() => {
+          num++;
+          document.getElementById("num").innerText = num;
+        }, 1000);
+      };
+
+      // Resume Function
+      const resumeFunc = () => {
+        startFunc();
+      };
+
+      // Stop Function
+      const stopFunc = () => {
+        clearInterval(intervalId);
+      };
+
+      // Reset function
+      const resetFunc = () => {
+        stopFunc();
+        document.getElementById("num").innerText = 0;
+      };
+      //   startFunc()
+      //   resumeFunct()
+      //   stopFunct()
+      //   resetFunct()
+
+      // get element
+      const btn1 = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+
+      btn1.addEventListener("click", () => {
+        if (btn1.innerText === "Start" || btn1.innerText === "Resume") {
+          startFunc();
+          btn1.innerText = "Stop";
+          btn1.className = "stop";
+          btn2.innerText = "Lap";
+          btn2.className = "lap";
+        } else if (btn1.innerText === "Stop") {
+          stopFunc();
+          btn1.innerText = "Resume";
+          btn1.className = "start";
+          btn2.innerText = "Reset";
+          btn2.className = "reset";
+        }
+      });
+
+      btn2.addEventListener("click", () => {
+        if (btn2.innerText === "Reset") {
+          resetFunc();
+          btn1.innerText = "Start";
+          btn1.className = "start";
+          btn2.innerText = "Lap";
+          btn2.className = "lapfade";
+          document.getElementById("lapdata").innerHTML = "";
+        } else if (btn2.innerText === "Lap") {
+          const lapdata = document.getElementById("lapdata");
+          const newlap = document.createElement("p");
+          const lapvalue = document.getElementById("num").innerText;
+          if (lapvalue != 0) {
+            newlap.innerText = lapvalue;
+            lapdata.append(newlap);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
