@@ -20,10 +20,10 @@
         flex-direction: column;
         margin: 20px;
       }
-      /* #addToDo{
+      /* #inputToDo{
         border: 2px solid red;
       } */
-      #addToDo input[type="text"] {
+      #inputToDo input[type="text"] {
         border-radius: 15px;
         padding: 10px;
       }
@@ -40,23 +40,33 @@
         color: white;
       }
       #toDoList {
+        font-size: large;
         padding: 15px;
         /* border: 2px solid red; */
       }
       #toDoList div {
         padding: 5px;
+        display: flex;
+      }
+      #toDoList li {
+        list-style: none;
+        padding-right: 10px;
+        flex: 1 0 auto;
+      }
+      #toDoList button {
+        background-color: red;
+        color: white;
+        padding: 3px;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <div id="addToDo">
+      <div id="inputToDo">
         <input type="text" name="task" id="task" autocomplete="off" />
-        <button id="btn" onclick="add()">Add</button>
+        <button id="btn" type="submit">Add</button>
       </div>
       <div id="toDoList">
-        <div>i am div</div>
-        <div>i am div mohibu</div>
       </div>
     </div>
     <script src="./script.js"></script>
