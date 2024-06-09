@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HEADING</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/phone.css" />
+    <style>
+      section {
+        width: 72rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #outer, #inner, #middle {
+        padding: 3rem 5rem;
+        border: 1.5px solid #1f2544;
+        cursor: pointer;
+        font-size: 1rem;
+        text-transform: uppercase;
+        background-color: #c7c8cc;
+        color: #1f2544;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+      }
+      #inner:hover {
+        background-color: #d6417a;
+        color: #000;
+        z-index: 3;
+        position: relative;
+      }
+
+      #middle:hover {
+        background-color: #9f70fd;
+        color: #000;
+        z-index: 2;
+        position: relative;
+      }
+
+      #outer:hover {
+        background-color: #9bcf53;
+        color: #000;
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- heading -->
+    <h1 id="heading">HEADING</h1>
+
+    <section>
+      <div id="outer">
+        Outer
+        <div id="middle">
+          Middle
+          <div id="inner">Inner</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- source code box -->
+    <div id="box">
+      <div id="title_bar">
+        <div id="title">Source Code</div>
+        <button id="copy" onclick="copyFunct()">Copy</button>
+      </div>
+
+      <xmp id="code-box"></xmp>
+    </div>
+
+    <!-- Adding javaScript Source -->
+    <script src="./JS/42event-propagation.js"></script>
+
+    <script>
+      function copyFunct() {
+        const copyText = document.getElementById("code-box");
+        navigator.clipboard.writeText(copyText.innerText);
+      }
+    </script>
+
+    <script>
+      fetch("./JS/42event-propagation.js")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("code-box").textContent = data;
+        })
+        .catch((error) =>
+          console.error("Error fetching ./JS/42event-propagation.js", error)
+        );
+    </script>
+  </body>
+</html>
