@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dad Joke</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background-image: linear-gradient(to right, #53c1d2, #5aeb66);
+        color: white;
+      }
+
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+      }
+
+      .centered-div {
+        width: 600px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        margin: 5px;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+      }
+
+      #api_body {
+        font-size: large;
+        padding: 15px;
+      }
+
+      #fetchJoke {
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+      }
+      #fetchJoke:hover {
+        background-color: rgb(1, 51, 1);
+      }
+      #fetchJoke:active {
+        background-color: rgb(13, 160, 13);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="centered-div">
+        <h1>Dad Jokes!</h1>
+        <div id="api_body"></div>
+        <button id="fetchJoke">Get Joke</button>
+      </div>
+    </div>
+    <script>
+      const api_body = document.getElementById("api_body");
+
+      const addJoke = (joke) => {
+        api_body.innerText = joke;
+      };
+      const fetchJokeHandle = async () => {
+        try {
+          const res = await fetch("https://icanhazdadjoke.com/", {
+            headers: {
+              Accept: "application/json",
+            },
+          }); 
+          const data = await res.json();
+          addJoke(data.joke);
+        } catch (error) {
+          addJoke(error);
+        }
+      };
+      document
+        .getElementById("fetchJoke")
+        .addEventListener("click", fetchJokeHandle);
+      fetchJokeHandle();
+    </script>
+  </body>
+</html>
