@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KYW | Know Your Weather</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-image: linear-gradient(to right, #3d73e8, #792e8a);
+        color: white;
+      }
+      #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #weatherData {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: beige;
+        flex-flow: column;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 20px;
+        font-size: large;
+      }
+      input {
+        margin: 10px;
+        padding: 8px;
+      }
+      .data{
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="weatherData">
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="Enter the city name..."
+        />
+        <div class="data">
+          <div>City Name: <span id="place"></span></div>
+        </div>
+        <div class="data">
+          <div>Date & Time: <span id="dateTime"></span></div>
+        </div>
+        <div class="data">
+          <div>Sunrise: <span id="sunrise"></span></div>
+        </div>
+        <div class="data">
+          <div>sunset: <span id="sunset"></span></div>
+        </div>
+        <div class="data">
+          <div>Temp: <span id="temp"></span></div>
+        </div>
+        <div class="data">
+          <div>Feels Like: <span id="feelsLike"></span></div>
+        </div>
+        <div class="data">
+          <div>Temp Max: <span id="tempMax"></span></div>
+        </div>
+        <div class="data">
+          <div>Temp Min: <span id="tempMin"></span></div>
+        </div>
+        <div class="data">
+          <div>Humidity: <span id="humidity"></span></div>
+        </div>
+        <div class="data">
+          <div>Pressure: <span id="pressure"></span></div>
+        </div>
+        <div class="data">
+          <div>Country: <span id="country"></span></div>
+        </div>
+        <div class="data">
+          <div>Timezone: <span id="timezone"></span></div>
+        </div>
+        <div class="data">
+          <div>Visibility: <span id="visibility"></span></div>
+        </div>
+        <div class="data">
+          <div>Weather: <span id="weather"></span></div>
+        </div>
+        <div class="data">
+          <div>Wind Speed: <span id="windSpeed"></span></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
